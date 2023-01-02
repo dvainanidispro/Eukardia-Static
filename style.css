@@ -1,0 +1,211 @@
+
+:root{
+    --sm: 576px;
+    --md: 768px;
+    --lg: 992px;
+    --xl: 1200px;
+    --primarycolor: hsl(231, 48%, 24%);
+    --backgroundcolor: hsl(231, 48%, 13%);
+    --bodybackgroundcolor: lavender;
+    --headertextcolor: lavender;
+    --unitcolor: hsl(250, 16%, 92%);
+    --display-if-user: none;
+    --display-if-guest: block;
+    --unknown-answer: silver;
+    /* --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); */
+}
+
+
+
+/* BASIC BOILERPLATE CORRECTIONS */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Remove default margin and padding */
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+ol, ul, li{
+    margin-block: 0;
+}
+
+
+
+/* Make images easier to work with */
+img,
+svg, 
+picture,
+figure,
+.center {               /* center is here */
+  max-width: 100%;
+  display: block;
+  margin-inline: auto;		
+  text-align: center;	/*text inside figure*/
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Links */
+a{
+    text-decoration: none;
+    box-shadow: none;
+    transition: all 0.3s; 
+    font-weight: bold;
+    /* color: Blue; */
+}
+a:hover{color: hwb(180 10% 81%)}
+a:focus{outline: black solid 3px}
+
+
+body{
+    background-color: var(--backgroundcolor);
+}
+
+
+.center-contents{
+	display: grid;
+	place-items: center;
+}
+.inline-contents{  
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+}
+
+
+/*********************  HEADER FOOTER   *********************/
+
+
+header, header a:first-of-type, header nav>ul {    /*header, left logo, right navs*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;  /*vertical align, when big logo*/
+    list-style-type: none; 
+    padding-inline-start: 0;    /*fixes ul*/
+    gap: 2rem 1.5rem;
+}
+
+header{
+    background-color:var(--primarycolor);
+    color: var(--headertextcolor);
+    padding: 0.5rem min(3rem,10%);
+    border-bottom: 1px solid #e5e5e5;
+}
+
+header a{
+    color: var(--headertextcolor);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+header a:hover{
+    color:  hsl(231, 48%, 72%);
+}
+
+footer{padding: 1rem 3rem;}
+footer p{font-size: small}
+
+
+.logo{
+    width: 12rem;
+    height: 12rem;
+}
+
+
+.app-title{
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+
+.body-container{
+    background-color: var(--bodybackgroundcolor);
+    max-width: min(100% - 2rem, var(--lg));
+    margin-inline: auto; /*centers */
+    overflow-x: hidden;
+}
+
+
+.always-hidden{
+    display: none !important;
+}
+
+.toggle-menu, .toggle-menu:focus{
+    border-color: var(--headertextcolor);
+}
+.toggle-menu:active{
+    border-color: red !important;
+}
+
+/*
+@media ( width < 768px ){
+
+    .toggle-menu-div, .index-link{
+        flex-basis: 40%;        
+        text-align: right;
+    }
+
+    .app-title{
+        display: none;
+    }
+
+    header nav>ul{
+        flex-flow: column wrap;
+        gap: 1rem 0rem;
+    }
+
+    .hide-md{
+        display: none;
+    }
+}
+*/
+/* @media ( width < 576px  ){ .toggle-menu-div{flex-basis: 50%} } */
+/* @media ( width < 300px  ){ .toggle-menu-div{flex-basis: auto} } */
+
+
+
+
+
+
+/*********************  MAIN   *********************/
+
+h1{
+    font-size: 2rem;
+}
+
+.sm{
+    max-width: var(--sm);
+}
+.md{
+    max-width: var(--md);
+}
+
+main{
+    padding: 1rem min(3rem,5%);
+}
