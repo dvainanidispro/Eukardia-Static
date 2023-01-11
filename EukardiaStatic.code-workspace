@@ -5,7 +5,7 @@
 		}
 	],
 	"settings": {
-        "liveServer.settings.root": "/public/",
+        "liveServer.settings.root": "/",
         "liveServer.settings.port": 80
 	}
 }
