@@ -76,7 +76,7 @@ a{
     box-shadow: none;
     transition: all 0.3s; 
     font-weight: bold;
-    /* color: Blue; */
+    color: darkblue;
 }
 a:hover{color: hwb(180 10% 81%)}
 a:focus{outline: black solid 3px}
@@ -133,7 +133,7 @@ footer p{font-size: small}
 
 
 .logo{
-    width: 15rem;
+    width: 12rem;
     height: auto;
 }
 
@@ -162,6 +162,12 @@ footer p{font-size: small}
 .toggle-menu:active{
     border-color: red !important;
 }
+
+.btn-primary {
+    background-color: var(--primarycolor);
+    border-color: var(--primarycolor);
+}
+
 
 /*
 @media ( width < 768px ){
@@ -197,6 +203,11 @@ footer p{font-size: small}
 
 h1{
     font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2{
+    font-size: 1.5rem;
 }
 
 .sm{
