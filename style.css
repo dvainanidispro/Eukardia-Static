@@ -78,7 +78,7 @@ a{
     font-weight: bold;
     color: darkblue;
 }
-a:hover{color: hwb(180 10% 81%)}
+a:hover{color: hsl(180, 30%, 15%)}
 a:focus{outline: black solid 3px}
 
 
@@ -216,7 +216,12 @@ h2{
 .md{
     max-width: var(--md);
 }
+.bold{
+    font-weight: bold;
+
+}
 
 main{
     padding: 1rem min(3rem,5%);
 }
+
